@@ -41,11 +41,11 @@ body {
   position: absolute;
   border-radius: 50%;
   background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0.01) 70%
-  );
-  filter: blur(40px);
+  circle,
+  rgba(0, 0, 0, 0.05) 0%,
+  rgba(255, 255, 255, 1.01) 70%
+);
+  filter: blur(100px);
   animation: float 6s ease-in-out infinite;
 }
 
@@ -54,7 +54,7 @@ body {
   height: 400px;
   top: 25%;
   left: 25%;
-  animation-delay: 0s;
+  /* animation-delay: 0s; */
 }
 
 .bg-circle-2 {
@@ -62,7 +62,7 @@ body {
   height: 400px;
   top: 75%;
   right: 25%;
-  animation-delay: 2s;
+  /* animation-delay: 2s; */
 }
 
 .bg-circle-3 {
@@ -70,7 +70,7 @@ body {
   height: 400px;
   bottom: 25%;
   left: 33%;
-  animation-delay: 4s;
+  /* animation-delay: 4s; */
 }
 
 @keyframes float {
