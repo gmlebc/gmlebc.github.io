@@ -298,7 +298,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 88px;
+  padding-top: clamp(76px, 9svh, 88px);
+  padding-bottom: clamp(20px, 5svh, 64px);
   scroll-snap-align: start;
 }
 
@@ -308,7 +309,7 @@ body {
 
 .section-header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: clamp(18px, 5svh, 48px);
 }
 
 .eyebrow {
@@ -319,12 +320,12 @@ body {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #9a9a9a;
-  margin-bottom: 12px;
+  margin-bottom: clamp(6px, 1.4svh, 12px);
 }
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 6vw, 3.25rem);
+  font-size: clamp(1.75rem, min(6vw, 6.5svh), 3.25rem);
   font-weight: 700;
   letter-spacing: -0.035em;
   line-height: 1.1;
@@ -389,11 +390,12 @@ body {
   color: #cccccc;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-bottom: 16px;
+  margin-bottom: clamp(8px, 1.8svh, 16px);
 }
 
 .education-card {
   flex: 1; /* ocupa toda a altura da coluna, alinhada ao bloco de habilidades */
+  padding: clamp(16px, 3.4svh, 28px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -403,7 +405,7 @@ body {
   font-family: var(--font-display);
   font-size: 1.375rem;
   font-weight: 600;
-  margin: 16px 0 4px;
+  margin: clamp(10px, 1.8svh, 16px) 0 4px;
   letter-spacing: -0.025em;
   line-height: 1.25;
   text-wrap: balance;
@@ -416,7 +418,7 @@ body {
   gap: 16px;
   width: 100%;
   margin-top: auto; /* empurra os números para a base do card */
-  padding-top: 20px;
+  padding-top: clamp(10px, 2.2svh, 20px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -450,7 +452,7 @@ body {
   color: #bdbdbd;
   font-size: var(--text-base);
   line-height: 1.65;
-  margin-bottom: 24px;
+  margin-bottom: clamp(12px, 2.6svh, 24px);
   text-wrap: pretty;
 }
 
@@ -464,12 +466,12 @@ body {
   flex: 1; /* mesma altura do card de Formação */
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: clamp(8px, 1.8svh, 16px);
 }
 
 .skills-card {
   flex: 1; /* os 3 grupos dividem a altura igualmente */
-  padding: 20px 24px;
+  padding: clamp(12px, 2.4svh, 20px) 24px;
 }
 
 .skills-title {
@@ -477,7 +479,7 @@ body {
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: -0.01em;
-  margin-bottom: 12px;
+  margin-bottom: clamp(8px, 1.5svh, 12px);
 }
 
 .skills-list {
@@ -491,11 +493,42 @@ body {
   font-family: var(--font-mono);
   font-size: 0.78rem;
   font-weight: 500;
-  padding: 6px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 12px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.06);
   color: #e6e6e6;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+/* Logos em branco; ao passar o mouse ganham a cor da marca (--brand) */
+.skill-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  fill: currentColor;
+  color: #e6e6e6;
+  transition: color 0.25s ease;
+}
+
+.skill-icon-line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.skills-list li:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: color-mix(in srgb, var(--brand, #ffffff) 55%, transparent);
+}
+
+.skills-list li:hover .skill-icon {
+  color: var(--brand, #ffffff);
 }
 
 /* ===== Projetos ===== */
@@ -617,6 +650,25 @@ body {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding-left: 10px;
+  transition: background 0.25s ease;
+}
+
+.tag .skill-icon {
+  width: 12px;
+  height: 12px;
+  color: #e6e6e6;
+}
+
+.tag:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.tag:hover .skill-icon {
+  color: var(--brand, #ffffff);
 }
 
 .project-button {
@@ -826,6 +878,44 @@ a:focus-visible {
   }
 
   .video-background {
+    display: none;
+  }
+}
+
+/* ===== Telas baixas: a seção Formação e Habilidades continua cabendo inteira ===== */
+@media (max-height: 700px) and (min-width: 769px) {
+  #formacao .card-text {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  #formacao .skills-list li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  #formacao .skills-list {
+    gap: 6px;
+  }
+
+  .edu-facts strong {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-height: 660px) and (min-width: 769px) {
+  #formacao .eyebrow {
+    display: none;
+  }
+}
+
+@media (max-height: 620px) and (min-width: 769px) {
+  #formacao .card-text {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+
+  #formacao .edu-facts {
     display: none;
   }
 }
