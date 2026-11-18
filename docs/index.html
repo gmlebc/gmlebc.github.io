@@ -21,6 +21,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/foto-perfil.jpg" />
 
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -43,11 +44,10 @@
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar" aria-label="Navegação principal">
       <div class="container navbar-inner">
-        <a href="#inicio" class="logo">Leandro B. Cardoso</a>
+        <a href="#inicio" class="logo">Leandro Barbosa Cardoso</a>
         <div class="nav-links">
           <a href="#inicio">Início</a>
           <a href="#formacao">Formação</a>
-          <a href="#habilidades">Habilidades</a>
           <a href="#projetos">Projetos</a>
           <a href="#contato">Contato</a>
         </div>
@@ -122,74 +122,79 @@
           </div>
         </div>
       </div>
+
+      <a href="#formacao" class="scroll-down" aria-label="Rolar para a próxima seção">
+        <svg class="icon" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <polyline points="6,9 12,15 18,9"></polyline>
+        </svg>
+      </a>
     </header>
 
     <main>
-      <!-- ===== FORMAÇÃO ACADÊMICA ===== -->
-      <section class="section" id="formacao">
+      <!-- ===== FORMAÇÃO E HABILIDADES ===== -->
+      <section class="section section-full" id="formacao">
         <div class="container">
           <div class="section-header">
-            <h2 class="section-title">Formação Acadêmica</h2>
+            <h2 class="section-title">Formação e Habilidades</h2>
           </div>
 
-          <article class="card education-card">
-            <span class="badge">2024 – 2026</span>
-            <h3 class="card-title">
-              Tecnologia em Desenvolvimento de Software Multiplataforma (CST)
-            </h3>
-            <p class="card-subtitle">
-              Fatec Jacareí – Professor Francisco de Moura (Jacareí/SP)
-            </p>
-            <p class="card-text">
-              Curso superior tecnológico com foco em desenvolvimento web, mobile
-              e back-end, banco de dados, engenharia de software, computação em
-              nuvem e inteligência artificial. A cada semestre, um projeto real
-              é desenvolvido em equipe com Scrum na Aprendizagem Baseada em
-              Projetos (ABP).
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <!-- ===== HABILIDADES ===== -->
-      <section class="section" id="habilidades">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">Habilidades</h2>
-          </div>
-
-          <div class="skills-groups">
-            <div class="card skills-card">
-              <h3 class="skills-title">Front-end</h3>
-              <ul class="skills-list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>React</li>
-                <li>React Native</li>
-                <li>Tailwind CSS</li>
-              </ul>
+          <div class="edu-skills">
+            <div class="edu-col">
+              <h3 class="col-title">Formação Acadêmica</h3>
+              <article class="card education-card">
+                <span class="badge">2024 – 2026</span>
+                <h3 class="card-title">
+                  Tecnologia em Desenvolvimento de Software Multiplataforma (CST)
+                </h3>
+                <p class="card-subtitle">
+                  Fatec Jacareí – Professor Francisco de Moura (Jacareí/SP)
+                </p>
+                <p class="card-text">
+                  Curso superior tecnológico com foco em desenvolvimento web, mobile
+                  e back-end, banco de dados, engenharia de software, computação em
+                  nuvem e inteligência artificial. A cada semestre, um projeto real
+                  é desenvolvido em equipe com Scrum na Aprendizagem Baseada em
+                  Projetos (ABP).
+                </p>
+              </article>
             </div>
-            <div class="card skills-card">
-              <h3 class="skills-title">Back-end e dados</h3>
-              <ul class="skills-list">
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>Python</li>
-                <li>Flask</li>
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-              </ul>
-            </div>
-            <div class="card skills-card">
-              <h3 class="skills-title">Ferramentas e práticas</h3>
-              <ul class="skills-list">
-                <li>Git e GitHub</li>
-                <li>Scrum</li>
-                <li>Docker</li>
-                <li>Playwright</li>
-              </ul>
+
+            <div class="skills-col" id="habilidades">
+              <h3 class="col-title">Habilidades</h3>
+              <div class="skills-groups">
+                <div class="card skills-card">
+                  <h3 class="skills-title">Front-end</h3>
+                  <ul class="skills-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>React</li>
+                    <li>React Native</li>
+                    <li>Tailwind CSS</li>
+                  </ul>
+                </div>
+                <div class="card skills-card">
+                  <h3 class="skills-title">Back-end e dados</h3>
+                  <ul class="skills-list">
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>Python</li>
+                    <li>Flask</li>
+                    <li>PostgreSQL</li>
+                    <li>MongoDB</li>
+                  </ul>
+                </div>
+                <div class="card skills-card">
+                  <h3 class="skills-title">Ferramentas e práticas</h3>
+                  <ul class="skills-list">
+                    <li>Git e GitHub</li>
+                    <li>Scrum</li>
+                    <li>Docker</li>
+                    <li>Playwright</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -398,7 +403,7 @@
       </section>
 
       <!-- ===== CONTATO ===== -->
-      <section class="section" id="contato">
+      <section class="section section-full" id="contato">
         <div class="container">
           <div class="section-header">
             <h2 class="section-title">Contato</h2>
@@ -452,5 +457,148 @@
         </p>
       </div>
     </footer>
+
+    <a href="#inicio" class="back-to-top" id="back-to-top" aria-label="Voltar ao topo" hidden>
+      <svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+        <polyline points="6,15 12,9 18,15"></polyline>
+      </svg>
+    </a>
+
+    <script>
+      (function () {
+        var sections = ["inicio", "formacao", "projetos", "contato"].map(function (id) {
+          return document.getElementById(id);
+        });
+        var links = document.querySelectorAll(".nav-links a");
+        var topBtn = document.getElementById("back-to-top");
+
+        /* ---- Menu com seção ativa + botão de voltar ao topo ---- */
+        var ticking = false;
+        function update() {
+          ticking = false;
+          var mid = window.scrollY + window.innerHeight * 0.45;
+          var current = sections[0];
+          sections.forEach(function (s) {
+            if (s.offsetTop <= mid) current = s;
+          });
+          links.forEach(function (a) {
+            if (a.getAttribute("href") === "#" + current.id) {
+              a.setAttribute("aria-current", "true");
+            } else {
+              a.removeAttribute("aria-current");
+            }
+          });
+          topBtn.hidden = window.scrollY < window.innerHeight * 0.6;
+        }
+        window.addEventListener(
+          "scroll",
+          function () {
+            if (!ticking) {
+              ticking = true;
+              requestAnimationFrame(update);
+            }
+          },
+          { passive: true }
+        );
+        window.addEventListener("resize", update);
+        update();
+
+        /* ---- Roda do mouse: um "tique" leva à próxima seção ----
+           Dentro de seções mais altas que a tela (Projetos) a rolagem é normal.
+           Toque, teclado e "reduzir movimento" continuam com a rolagem nativa. */
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+        var busy = false;
+        var waitPause = false;
+        var lastWheel = 0;
+
+        function getStops() {
+          var vh = window.innerHeight;
+          var max = document.documentElement.scrollHeight - vh;
+          var list = [];
+          var zones = [];
+          sections.forEach(function (s) {
+            var top = s.offsetTop;
+            var h = s.offsetHeight;
+            list.push(top);
+            if (h > vh + 100) {   // tolera um pequeno excesso (ex.: tela baixa)
+              list.push(top + h - vh);
+              zones.push([top, top + h - vh]);
+            }
+          });
+          list.push(max);
+          list = list
+            .map(function (v) { return Math.max(0, Math.min(max, Math.round(v))); })
+            .sort(function (a, b) { return a - b; })
+            .filter(function (v, i, arr) { return i === 0 || v - arr[i - 1] > 2; });
+          return { list: list, zones: zones };
+        }
+
+        function goTo(top) {
+          busy = true;
+          waitPause = true;
+          var done = false;
+          function finish() {
+            if (done) return;
+            done = true;
+            busy = false;
+            window.removeEventListener("scrollend", finish);
+          }
+          window.addEventListener("scrollend", finish);
+          setTimeout(finish, 900);
+          window.scrollTo({ top: top, behavior: "smooth" });
+        }
+
+        window.addEventListener(
+          "wheel",
+          function (e) {
+            if (e.ctrlKey || e.defaultPrevented || reduce.matches) return;
+            if (Math.abs(e.deltaY) <= Math.abs(e.deltaX) || e.deltaY === 0) return;
+
+            var now = performance.now();
+            var gap = now - lastWheel;
+            lastWheel = now;
+
+            // durante a animação (e na "inércia" do touchpad) ignora a roda
+            if (busy) { e.preventDefault(); return; }
+            if (waitPause) {
+              if (gap > 150) waitPause = false;
+              else { e.preventDefault(); return; }
+            }
+
+            var dy = e.deltaMode === 1 ? e.deltaY * 40
+              : e.deltaMode === 2 ? e.deltaY * window.innerHeight
+              : e.deltaY;
+            var dir = dy > 0 ? 1 : -1;
+            var y = window.scrollY;
+            var st = getStops();
+            var target = null;
+
+            var zone = st.zones.filter(function (z) {
+              return y >= z[0] - 2 && y <= z[1] + 2;
+            })[0];
+            if (zone) {
+              if (dir > 0 && y < zone[1] - 2) {
+                if (y + dy < zone[1]) return;     // rolagem normal dentro da seção
+                target = zone[1];                 // para no fim da seção
+              } else if (dir < 0 && y > zone[0] + 2) {
+                if (y + dy > zone[0]) return;
+                target = zone[0];                 // para no início da seção
+              }
+            }
+            if (target === null) {
+              if (dir > 0) {
+                target = st.list.filter(function (v) { return v > y + 2; })[0];
+              } else {
+                target = st.list.filter(function (v) { return v < y - 2; }).pop();
+              }
+            }
+            if (target === undefined) return;     // já está no início/fim da página
+            e.preventDefault();
+            goTo(target);
+          },
+          { passive: false }
+        );
+      })();
+    </script>
   </body>
 </html>
