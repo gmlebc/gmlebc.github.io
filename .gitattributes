@@ -1,0 +1,13 @@
+# Normaliza quebras de linha para LF em arquivos de texto
+* text=auto eol=lf
+
+*.html text diff=html
+*.css  text diff=css
+*.md   text
+
+# Binários
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.mp4   binary
+*.woff2 binary
