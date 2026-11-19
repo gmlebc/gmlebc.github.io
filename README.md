@@ -9,7 +9,7 @@
 ## 🔗 Links Importantes
 
 - **Portfólio Online:** [https://gmlebc.github.io/](https://gmlebc.github.io/)
-- **Pitch de Apresentação:** em breve
+- **Pitch de Apresentação:** [Assista aqui](https://www.youtube.com/watch?v=gr_geOvrwaw)
 
 ---
 
